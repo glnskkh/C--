@@ -22,6 +22,11 @@ double Sgeron(double a, double b, double c)
   return S;
 }
 
+bool isObtuseA(double a, double b, double c)
+{
+  return pow(a, 2) > pow(b, 2) + pow(c, 2);
+}
+
 int main(void)
 {
   struct Point a, b, c;
@@ -41,14 +46,12 @@ int main(void)
   p = distance(c, a);
   q = distance(c, b);
 
-  if (p * p + l * l < q * q || q * q + l * l < p * p)
-  {
+  if (isObtuseA(q, p, l) || isObtuseA(p, q, l))
     cout << min(p, q);
-  }
   else
   {
     h = 2 * Sgeron(l, p, q) / l;
 
-    cout << min(min(p, q), h);
+    cout << h;
   }
 }

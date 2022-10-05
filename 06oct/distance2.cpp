@@ -17,6 +17,11 @@ double Sgeron(double a, double b, double c)
   return S;
 }
 
+bool isObtuseA(double a, double b, double c)
+{
+  return pow(a, 2) > pow(b, 2) + pow(c, 2);
+}
+
 int main(void)
 {
   double ax, bx, cx, ay, by, cy;
@@ -36,7 +41,7 @@ int main(void)
   p = distance(cx, cy, ax, ay);
   q = distance(cx, cy, bx, by);
 
-  if (p * p + l * l < q * q || q * q + l * l < p * p)
+  if (isObtuseA(q, p, l) || isObtuseA(p, q, l))
     cout << min(p, q);
   else
   {
