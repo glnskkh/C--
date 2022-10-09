@@ -17,7 +17,7 @@ int main()
   double intersectionX = min(a2x, b2x) - max(a1x, b1x);
   double intersectionY = min(a2y, b2y) - max(a1y, b1y);
 
-  if (intersectionX <= 0 || intersectionY <= 0)
+  if (intersectionX < 0 || intersectionY < 0)
     cout << "Нет пересечения";
   else
   {

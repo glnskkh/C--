@@ -11,8 +11,7 @@ int main()
   cin >> a >> b >> c;
 
   bool isTriangle =
-      a + b > c && b + c > a && c + a > b &&
-      a > abs(b - c) && b > abs(a - c) && c > abs(a - b);
+      a + b > c && b + c > a && c + a > b;
 
   if (!isTriangle)
   {
@@ -21,6 +20,7 @@ int main()
   }
 
   cout << "Это треугольник, а именно ";
+
   double a2 = a * a, b2 = b * b, c2 = c * c;
 
   bool isAcute = a2 + b2 > c2 && a2 + c2 > b2 && b2 + c2 > a2;
