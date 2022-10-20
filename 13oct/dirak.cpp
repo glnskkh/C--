@@ -5,11 +5,10 @@ using namespace std;
 
 int main()
 {
-  int i = 0;
-  while ((3 * i) % 8 != 2)
-    i++;
-
-  int x = 27 * i + 38;
-
-  cout << x;
+  for (int i = 0; i < 5; i++)
+  {
+    int n = 6 + 8 * i;
+    int x = (27 * n + 38) / 8;
+    cout << x << endl;
+  }
 }
