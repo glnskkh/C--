@@ -2,14 +2,14 @@
 
 using namespace std;
 
-int reversed(int n)
+int reversed(int n, int sys = 10)
 {
   int result = 0;
 
   while (n > 0)
   {
-    result = (10 * result) + (n % 10);
-    n /= 10;
+    result = (sys * result) + (n % sys);
+    n /= sys;
   }
 
   return result;
