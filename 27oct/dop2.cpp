@@ -4,8 +4,7 @@ using namespace std;
 
 #define MAX_LEN 100
 
-size_t readArr(double *array)
-{
+size_t readArr(double *array) {
   size_t len;
 
   cout << "Введите число элементов: ";
@@ -20,15 +19,13 @@ size_t readArr(double *array)
   return i;
 }
 
-int main()
-{
+int main() {
   double X[MAX_LEN], Y[MAX_LEN];
 
   size_t lenX = readArr(X);
   size_t lenY = readArr(Y);
 
-  if (lenX == 0 && lenY == 0)
-  {
+  if (lenX == 0 && lenY == 0) {
     cerr << "Массивы пусты";
     return -1;
   }
@@ -41,10 +38,8 @@ int main()
   int i = 0, j = lenY - 1;
   double M = abs(X[i] + Y[j] - a), Mi = i, Mj = j;
 
-  while (i < lenX && M != 0 && j >= 0)
-  {
-    while (X[i] + Y[j] > a)
-    {
+  while (i < lenX && M != 0 && j >= 0) {
+    while (X[i] + Y[j] > a) {
       --j;
       if (!(j >= 0))
         break;
@@ -56,21 +51,18 @@ int main()
     if (!(j >= 0))
       break;
 
-    if (X[i] + Y[j] == a)
-    {
+    if (X[i] + Y[j] == a) {
       M = 0, Mi = i, Mj = j;
       break;
     }
 
-    while (X[i] + Y[j] < a)
-    {
+    while (X[i] + Y[j] < a) {
       i++;
       if (!(i < lenX))
         break;
 
       if (abs(X[i] + Y[j] - a) < M)
-        M = abs(X[i] + Y[j] - a),
-        Mi = i, Mj = j;
+        M = abs(X[i] + Y[j] - a), Mi = i, Mj = j;
     }
 
     if (!(i < lenX))

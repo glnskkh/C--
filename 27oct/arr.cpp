@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   int N;
 
   cout << "Введите длину массива: ";
@@ -15,8 +14,7 @@ int main()
     cin >> arr[i];
 
   for (int i = 0; i < N - 1; ++i)
-    if (!(arr[i] < arr[i + 1]))
-    {
+    if (!(arr[i] < arr[i + 1])) {
       cout << "Не по возрастанию!!!";
       return 0;
     }
