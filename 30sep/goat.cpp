@@ -1,8 +1,7 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
-int main()
-{
+int main() {
   double l, a;
 
   std::cin >> l >> a;
@@ -13,8 +12,7 @@ int main()
     std::cout << pow(a * 2, 2) << std::endl;
   else if (l <= a)
     std::cout << M_PI * pow(l, 2) << std::endl;
-  else
-  {
+  else {
     double circleS = M_PI * pow(l, 2);
 
     double angle = acos(a / l);

@@ -1,20 +1,17 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main() {
   double a, b, c;
 
   cout << "Введите стороны потенциального треугольника: ";
   cin >> a >> b >> c;
 
-  bool isTriangle =
-      a + b > c && b + c > a && c + a > b;
+  bool isTriangle = a + b > c && b + c > a && c + a > b;
 
-  if (!isTriangle)
-  {
+  if (!isTriangle) {
     cout << "Это не треугольник";
     return -1;
   }

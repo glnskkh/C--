@@ -2,12 +2,10 @@
 
 using namespace std;
 
-int reversed(int n, int sys = 10)
-{
+int reversed(int n, int sys = 10) {
   int result = 0;
 
-  while (n > 0)
-  {
+  while (n > 0) {
     result = (sys * result) + (n % sys);
     n /= sys;
   }
@@ -15,8 +13,7 @@ int reversed(int n, int sys = 10)
   return result;
 }
 
-int main()
-{
+int main() {
   int n, k;
 
   cout << "Введите число n: ";

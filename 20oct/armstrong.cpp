@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int countDigits(int n)
-{
+int countDigits(int n) {
   int count = 0;
 
   while (n > 0)
@@ -12,19 +11,14 @@ int countDigits(int n)
   return count;
 }
 
-int pow(int n, int power)
-{
+int pow(int n, int power) {
   int b = 1, c = n, k = power;
 
-  while (k > 0)
-  {
-    if (k % 2 == 0)
-    {
+  while (k > 0) {
+    if (k % 2 == 0) {
       c *= c;
       k /= 2;
-    }
-    else
-    {
+    } else {
       b *= c;
       k--;
     }
@@ -33,16 +27,14 @@ int pow(int n, int power)
   return b;
 }
 
-int main()
-{
+int main() {
   int n, k, S, digits;
 
   cout << "Введите число n: ";
   cin >> n;
 
   k = n, S = 0, digits = countDigits(n);
-  while (k > 0)
-  {
+  while (k > 0) {
     S += pow(k % 10, digits);
     k /= 10;
   }

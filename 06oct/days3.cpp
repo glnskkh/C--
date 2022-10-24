@@ -2,31 +2,26 @@
 
 using namespace std;
 
-bool isLeap(int year)
-{
-  bool leap =
-      (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+bool isLeap(int year) {
+  bool leap = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 
   return leap;
 }
 
-int main()
-{
+int main() {
   int day, month, year;
 
   cout << "Введите дату: ";
   cin >> day >> month >> year;
 
-  if (day < 0 || day > 31 || month < 0 || month > 12)
-  {
+  if (day < 0 || day > 31 || month < 0 || month > 12) {
     cerr << "Такой даты не существует!";
     return -1;
   }
 
   int daysElapsed = 0;
 
-  switch (month - 1)
-  {
+  switch (month - 1) {
   case 12:
     daysElapsed += 31;
   case 11:

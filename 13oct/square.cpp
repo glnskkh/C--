@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   double x, y, a;
 
   cout << "Введите x, y, a: ";

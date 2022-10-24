@@ -2,16 +2,14 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
   int n, k, digit;
 
   cout << "Введите n: ";
   cin >> n;
 
   k = n;
-  while (k > 0)
-  {
+  while (k > 0) {
     digit = k % 10;
 
     if (digit != 0 && n % digit == 0)

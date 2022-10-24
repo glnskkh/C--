@@ -1,15 +1,13 @@
 #include <iostream>
 
-int main()
-{
+int main() {
   int a;
 
   std::cin >> a;
 
   if ((a % 100) / 10 == 1)
     std::cout << a << " лет" << std::endl;
-  else
-  {
+  else {
     int p = a % 10;
 
     if (p == 1)

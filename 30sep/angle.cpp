@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 const float ANGLE_PER_MIN = 6.0;
 const float ANGLE_PER_HOUR = 30.0;
@@ -7,8 +7,7 @@ const float ANGLE_PER_HOUR = 30.0;
 const float HOURS_IN_CLOCK = 12.0;
 const float MINUTES_IN_CLOCK = 60.0;
 
-int main()
-{
+int main() {
   float hours, minutes;
 
   std::cin >> hours >> minutes;

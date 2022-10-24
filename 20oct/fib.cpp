@@ -2,8 +2,7 @@
 
 using namespace std;
 
-int len(int n, int sys = 10)
-{
+int len(int n, int sys = 10) {
   int l = 0;
 
   while (n > 0)
@@ -12,8 +11,7 @@ int len(int n, int sys = 10)
   return l;
 }
 
-int main()
-{
+int main() {
   int position;
 
   cin >> position;
@@ -21,8 +19,7 @@ int main()
   int a = 0, b = 1;
   int l;
 
-  while ((l = len(b)) < position)
-  {
+  while ((l = len(b)) < position) {
     position -= l;
     b = b + a;
     a = b - a;

@@ -1,10 +1,9 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main() {
   double a1x, a1y, a2x, a2y;
   double b1x, b1y, b2x, b2y;
 
@@ -19,8 +18,7 @@ int main()
 
   if (intersectionX < 0 || intersectionY < 0)
     cout << "Нет пересечения";
-  else
-  {
+  else {
     double S = intersectionX * intersectionY;
 
     cout << "Площадь пересечения: " << S << endl;

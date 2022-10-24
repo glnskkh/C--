@@ -2,12 +2,10 @@
 
 using namespace std;
 
-int countDigits(int n, int digit)
-{
+int countDigits(int n, int digit) {
   int count = 0;
 
-  while (n > 0)
-  {
+  while (n > 0) {
     if (n % 10 == digit)
       count++;
 
@@ -17,8 +15,7 @@ int countDigits(int n, int digit)
   return count;
 }
 
-int main()
-{
+int main() {
   int n, i, j, result = 0;
 
   cout << "Введите n: ";

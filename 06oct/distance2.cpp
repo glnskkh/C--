@@ -1,15 +1,13 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-double distance(double p1x, double p1y, double p2x, double p2y)
-{
+double distance(double p1x, double p1y, double p2x, double p2y) {
   return sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
 }
 
-double Sgeron(double a, double b, double c)
-{
+double Sgeron(double a, double b, double c) {
   double p = (a + b + c) / 2.0;
 
   double S = sqrt(p * (p - a) * (p - b) * (p - c));
@@ -17,13 +15,11 @@ double Sgeron(double a, double b, double c)
   return S;
 }
 
-bool isObtuseA(double a, double b, double c)
-{
+bool isObtuseA(double a, double b, double c) {
   return pow(a, 2) > pow(b, 2) + pow(c, 2);
 }
 
-int main(void)
-{
+int main(void) {
   double ax, bx, cx, ay, by, cy;
   double l, p, q, h;
 
@@ -43,8 +39,7 @@ int main(void)
 
   if (isObtuseA(q, p, l) || isObtuseA(p, q, l))
     cout << min(p, q);
-  else
-  {
+  else {
     h = 2 * Sgeron(l, p, q) / l;
 
     cout << h;

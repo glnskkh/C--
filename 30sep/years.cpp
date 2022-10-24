@@ -1,7 +1,6 @@
 #include <iostream>
 
-int years0(int year)
-{
+int years0(int year) {
   int d = year / 4;
 
   d -= year / 100;
@@ -11,8 +10,7 @@ int years0(int year)
   return d;
 }
 
-int main()
-{
+int main() {
   int year1, year2;
 
   std::cin >> year1 >> year2;

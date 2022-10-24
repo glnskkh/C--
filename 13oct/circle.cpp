@@ -1,10 +1,9 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main() {
   double R, x, y, d;
   cout << "Введите R, x, y: ";
   cin >> R >> x >> y;

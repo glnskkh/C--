@@ -1,10 +1,9 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int S(int a)
-{
+int S(int a) {
   int s = 1;
 
   for (int i = 2; i < a; i++)
@@ -14,8 +13,7 @@ int S(int a)
   return s;
 }
 
-int main()
-{
+int main() {
   int a, b;
 
   cout << "Введите числа a и b: ";

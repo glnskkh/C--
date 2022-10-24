@@ -1,15 +1,13 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-bool isPrime(int a)
-{
+bool isPrime(int a) {
   bool prime = true;
 
   for (int i = 2; i <= (int)floor(sqrt(a)); i++)
-    if (a % i == 0)
-    {
+    if (a % i == 0) {
       prime = false;
       break;
     }
@@ -17,33 +15,28 @@ bool isPrime(int a)
   return prime;
 }
 
-int main()
-{
+int main() {
   int a, b;
 
   cout << "Введите a, b: ";
   cin >> a >> b;
 
-  if (!(a > 0 && b > 0))
-  {
+  if (!(a > 0 && b > 0)) {
     cerr << "Это не числа-близнецы: они не натуральны!";
     return -1;
   }
 
-  if (abs(a - b) != 2)
-  {
+  if (abs(a - b) != 2) {
     cerr << "Это не числа-близнецы: они отличаются не на два!";
     return -1;
   }
 
-  if (!isPrime(a))
-  {
+  if (!isPrime(a)) {
     cerr << "Число a = " << a << " не является простым!";
     return -1;
   }
 
-  if (!isPrime(b))
-  {
+  if (!isPrime(b)) {
     cerr << "Число b = " << b << " не является простым!";
     return -1;
   }

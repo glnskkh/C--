@@ -2,16 +2,13 @@
 
 using namespace std;
 
-bool isLeap(int year)
-{
-  bool leap =
-      (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+bool isLeap(int year) {
+  bool leap = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 
   return leap;
 }
 
-int main()
-{
+int main() {
   int day, month, year;
 
   cout << "Введите дату: ";
