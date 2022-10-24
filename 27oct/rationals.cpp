@@ -47,7 +47,7 @@ int main() {
 
   int q, r;
   int repeatIndex;
-  int *curRemainder = remainders, *curDigit = digits;
+  int lastDigitIndex = 0;
 
   while (true) {
     a *= 10;
@@ -60,8 +60,10 @@ int main() {
     if (repeatIndex != -1)
       break;
 
-    *curDigit = q, ++curDigit;
-    *curRemainder = r, ++curRemainder;
+    digits[lastDigitIndex] = q;
+    remainders[lastDigitIndex] = r;
+
+    ++lastDigitIndex;
 
     a = r;
   }
@@ -70,12 +72,12 @@ int main() {
   while (i < repeatIndex)
     cout << digits[i++];
 
-  if (curRemainder == remainders + i)
+  if (i == lastDigitIndex)
     return 0;
 
   cout << '(';
 
-  while (remainders + i < curRemainder)
+  while (i < lastDigitIndex)
     cout << digits[i++];
 
   cout << ')';
