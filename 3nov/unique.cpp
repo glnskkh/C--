@@ -19,14 +19,15 @@ void merge(int *A, int n, int *B, int m) {
   int *C = (int *)malloc((n + m) * sizeof(int));
 
   while (k != n + m) {
-    if (i < m && A[i] < B[j]) {
+    if (i < n && A[i] < B[j])
       C[k++] = A[i++];
-    } else {
+    else
       C[k++] = B[j++];
-    }
   }
 
   copy(A, C, n + m);
+
+  free(C);
 }
 
 void sort(int *A, int n) {

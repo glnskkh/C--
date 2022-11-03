@@ -5,8 +5,8 @@ using namespace std;
 #define BUFFER_SIZE 2
 
 int main() {
-  int buffer[BUFFER_SIZE];
-  int n, i, current, next, value, curLen, maxLen;
+  int a, b;
+  int n, current, next, value, curLen, maxLen;
 
   cout << "Введите число чисел, с которыми будем работать: ";
   cin >> n;
@@ -19,17 +19,16 @@ int main() {
 
   cout << "Введите последовательность чисел: ";
 
-  i = 0;
-  while (i < BUFFER_SIZE)
-    cin >> buffer[i++];
+  cin >> a;
+  cin >> b;
+
+  n -= 2;
 
   current = 0, curLen = 2, maxLen = -1;
-  while ((i++) < n) {
+  while (n-- > 0) {
     cin >> value;
 
-    next = (current + 1) % BUFFER_SIZE;
-
-    if (buffer[current] + value == 2 * buffer[next])
+    if (a + value == 2 * b)
       ++curLen;
     else
       curLen = 2;
@@ -37,7 +36,7 @@ int main() {
     if (maxLen < curLen)
       maxLen = curLen;
 
-    buffer[current] = value;
+    a = b, b = value;
 
     current = next;
   }
