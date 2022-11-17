@@ -28,12 +28,14 @@ int main(void) {
 
   cin >> n;
 
-  cout << "Введите массивы A и B: ";
-
   int A[n], B[n];
+
+  cout << "Введите массив A: ";
 
   for (int i = 0; i < n; ++i)
     cin >> A[i];
+
+  cout << "Введите массив A: ";
 
   for (int i = 0; i < n; ++i)
     cin >> B[i];
