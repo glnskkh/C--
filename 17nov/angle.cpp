@@ -39,13 +39,14 @@ int main(void) {
         continue;
 
       double d1 = distance(P[i][0], P[i][1], P[j][0], P[j][1]);
+
       for (int k = 0; k < n; ++k) {
         if (k == j || k == i)
           continue;
 
         double d2 = distance(P[k][0], P[k][1], P[j][0], P[j][1]);
 
-        cosA = cosAngle(P[i][0], P[i][1], P[j][0], P[j][1], P[k][0], P[k][0],
+        cosA = cosAngle(P[i][0], P[i][1], P[j][0], P[j][1], P[k][0], P[k][1],
                         d1, d2);
 
         if (cosA < minCos) {

@@ -19,7 +19,7 @@ int main(void)
 		} else {
 			if (inSpace) {
 				inSpace = false;
-			}
+	  		}
 
 			putchar(c);
 		}

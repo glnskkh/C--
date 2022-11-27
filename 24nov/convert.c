@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char itoc(int a, int b) {
+char itoc(int a) {
 	if (a < 10)
 		return a + '0';
 
@@ -15,7 +15,7 @@ int convert(int n, int p, char* output) {
 		return 0;
 	}
 
-	*output = itoc(n % p, p);
+	*output = itoc(n % p);
 
 	return 1 + convert(n / p, p, output + 1);
 }
