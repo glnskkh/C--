@@ -17,7 +17,7 @@ void combine(char *s, int len, int i) {
 
   combine(s, len, i + 1);
 
-  if (isalpha(s[i])) {
+  if (isalpha(s[i])) {r
     convert(s + i);
 
     combine(s, len, i + 1);
