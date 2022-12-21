@@ -91,6 +91,14 @@ void sortCounters(Counter *counters, int n_words)
   sortCounters(counters, n_words - 1);
 }
 
+void destroy(Counter *counters, int n_words)
+{
+  for (int i = 0; i < n_words; ++i)
+    delete counters[i].word;
+
+  free(counters);
+}
+
 int main(int argc, char **argv)
 {
   if (argc < 3)
@@ -108,4 +116,6 @@ int main(int argc, char **argv)
 
   for (int i = 0; i < n_words; ++i)
     cout << (*counters[i].word) << ": " << counters[i].count << endl;
+
+  destroy(counters, n_words);
 }
