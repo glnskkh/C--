@@ -1,12 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define swap(T, a, b) \
-  {                   \
-    T t = a;          \
-    a = b;            \
-    b = t;            \
-  }
+void swap(int *a, int *b)
+{
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+void cycle(int *A, int n)
+{
+  int current = 0, next;
+
+  do
+  {
+    next = (current + 1) % n;
+
+    swap(A + current, A + next);
+
+    current = next;
+  } while (current != n - 1);
+}
 
 int main(void)
 {
@@ -19,17 +33,9 @@ int main(void)
   for (int i = 0; i < n; i++)
     scanf("%d", A + i);
 
-  int current = 0, next;
-
-  do
-  {
-    next = (current + shift) % n;
-
-    swap(int, A[current], A[next]);
-
-    current = next;
-  } while (current != 0);
+  for (int i = 0; i < shift; ++i)
+    cycle(A, n);
 
   for (int i = 0; i < n; i++)
-    printf("%d", A[i]);
+    printf("%d ", A[i]);
 }
