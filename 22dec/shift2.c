@@ -40,13 +40,11 @@ int main(void)
     return 0;
   }
 
-  int count = 0, i = 0;
-
-  do
+  for (int count = 0, i = 0; count < n; ++i, ++count)
   {
-    int current = i, next;
+    int current = (i + shift) % n, next;
 
-    do
+    while (current != i)
     {
       next = (current + shift) % n;
 
@@ -55,10 +53,8 @@ int main(void)
       current = next;
 
       ++count;
-    } while (current != n + i - shift);
-
-    ++i;
-  } while (count < n && i <= n % shift);
+    }
+  }
 
   print(A, n);
 }
